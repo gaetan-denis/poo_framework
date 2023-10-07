@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TestDatabaseController;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,7 @@ Route::get('/admin', [AdminController::class,'index'])->name('admin');
  * Route pour la page Connexion
  */
 Route::get('/login', [LoginController::class,'index'])->name('login');
+Route::get('/registration', [RegistrationController::class,'index'])->name('registration');
 
 /**
  * Route permettant de tester la connexion à la base de donnée

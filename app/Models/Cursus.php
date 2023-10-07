@@ -7,6 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cursus extends Model
 {
-    protected $table = 'course';
-    protected $column = ['id', 'name', 'code'];
+    protected  $table = 'course';
+    protected array $column = ['id', 'name', 'code'];
+
+
+
+
+    public function getTeacher() : object
+    {
+        return $this->belongsTo(teacher::class);
+    }
+    public function getUsers() : object
+    {
+        return $this->belongsToMany(User::class, 'inscriptions');
+    }
 }
