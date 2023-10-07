@@ -6,6 +6,7 @@ use App\Http\Controllers\CursusController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TestDatabaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,8 @@ Route::get('/admin', [AdminController::class,'index'])->name('admin');
  */
 Route::get('/login', [LoginController::class,'index'])->name('login');
 
+/**
+ * Route permettant de tester la connexion à la base de donnée
+ */
+
+Route::get('/test-connexion', [TestDatabaseController::class, 'testConnection']);
