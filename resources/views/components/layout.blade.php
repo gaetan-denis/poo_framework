@@ -6,8 +6,9 @@
 <body>
 <nav class="nav">
     <a href="{{ route('home') }}" class="nav-link">Accueil</a>
-    <a href="index.php?view=view/profile" class="nav-link">Profil</a>
-    <a href="index.php?view=view/create" class="nav-link">Create</a>
+    <a href="{{ route('cursus')}}" class="nav-link">Liste des cours</a>
+    <a href="{{route ('profile')}}" class="nav-link">Profil</a>
+    <a href="{{route ('admin')}}" class="nav-link">Admin</a>
     <?php
     if (!empty($_SESSION['userid'])) {
         ?>
@@ -15,10 +16,11 @@
         <?php
     } else {
         ?>
-    <a href="index.php?view=view/login" class="nav-link">Login</a>
+    <a href="{{route ('login')}}" class="nav-link">Login</a>
         <?php
     }
     ?>
+</nav>
 {{ $slot }}
 <footer>
 </footer>
