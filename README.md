@@ -17,7 +17,10 @@
 - Une fois dans le dossier du projet, exécutez la commande composer install. Une fois que la commande composer install est terminée, le répertoire vendor devrait être présent dans le répertoire de votre projet, et vous disposerez de toutes les dépendances nécessaires pour exécuter votre application Laravel localement.
 
 
+- ouvrez le fichier env-example., renommez le en env. Et définissez les constantes de connexion.
+
 - Exécutez ensuite la commande "php artisan key:generate". Cette commande génère une clé d'application utilisée pour sécuriser votre application.
 
+.Excuter ensuite la commande "php artisan migrate"
 
 

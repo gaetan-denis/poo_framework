@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use App\Models\Cursus;
+use App\Models\Course;
 
 class CursusController extends Controller
 {
     public function index() : View
     {
-        $cursus= cursus::all();
+        $cursus= Course::all();
         return view('cursus', ['cursus'=>$cursus]);
     }
 }
